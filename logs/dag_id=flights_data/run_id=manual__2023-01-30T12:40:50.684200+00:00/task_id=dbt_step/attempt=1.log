@@ -1,0 +1,49 @@
+[2023-01-30T12:40:53.542+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: flights_data.dbt_step manual__2023-01-30T12:40:50.684200+00:00 [queued]>
+[2023-01-30T12:40:53.547+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: flights_data.dbt_step manual__2023-01-30T12:40:50.684200+00:00 [queued]>
+[2023-01-30T12:40:53.547+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-30T12:40:53.548+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-30T12:40:53.548+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-30T12:40:53.556+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): dbt_step> on 2023-01-30 12:40:50.684200+00:00
+[2023-01-30T12:40:53.561+0000] {standard_task_runner.py:55} INFO - Started process 17197 to run task
+[2023-01-30T12:40:53.565+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'flights_data', 'dbt_step', 'manual__2023-01-30T12:40:50.684200+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/simple_dag.py', '--cfg-path', '/tmp/tmp_ak8sl8s']
+[2023-01-30T12:40:53.566+0000] {standard_task_runner.py:83} INFO - Job 61: Subtask dbt_step
+[2023-01-30T12:40:53.617+0000] {task_command.py:388} INFO - Running <TaskInstance: flights_data.dbt_step manual__2023-01-30T12:40:50.684200+00:00 [running]> on host f9ad67e64070
+[2023-01-30T12:40:53.665+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=flights_data
+AIRFLOW_CTX_TASK_ID=dbt_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-30T12:40:50.684200+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-30T12:40:50.684200+00:00
+[2023-01-30T12:40:53.668+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-30T12:40:53.669+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd ../ && cd ../ && ls']
+[2023-01-30T12:40:53.680+0000] {subprocess.py:86} INFO - Output:
+[2023-01-30T12:40:53.684+0000] {subprocess.py:93} INFO - ***-scheduler-autorestart
+[2023-01-30T12:40:53.684+0000] {subprocess.py:93} INFO - bin
+[2023-01-30T12:40:53.685+0000] {subprocess.py:93} INFO - boot
+[2023-01-30T12:40:53.685+0000] {subprocess.py:93} INFO - clean-logs
+[2023-01-30T12:40:53.687+0000] {subprocess.py:93} INFO - dev
+[2023-01-30T12:40:53.688+0000] {subprocess.py:93} INFO - entrypoint
+[2023-01-30T12:40:53.688+0000] {subprocess.py:93} INFO - etc
+[2023-01-30T12:40:53.689+0000] {subprocess.py:93} INFO - home
+[2023-01-30T12:40:53.689+0000] {subprocess.py:93} INFO - lib
+[2023-01-30T12:40:53.690+0000] {subprocess.py:93} INFO - media
+[2023-01-30T12:40:53.690+0000] {subprocess.py:93} INFO - mnt
+[2023-01-30T12:40:53.691+0000] {subprocess.py:93} INFO - opt
+[2023-01-30T12:40:53.691+0000] {subprocess.py:93} INFO - proc
+[2023-01-30T12:40:53.692+0000] {subprocess.py:93} INFO - root
+[2023-01-30T12:40:53.692+0000] {subprocess.py:93} INFO - run
+[2023-01-30T12:40:53.693+0000] {subprocess.py:93} INFO - sbin
+[2023-01-30T12:40:53.693+0000] {subprocess.py:93} INFO - scripts
+[2023-01-30T12:40:53.693+0000] {subprocess.py:93} INFO - srv
+[2023-01-30T12:40:53.694+0000] {subprocess.py:93} INFO - sys
+[2023-01-30T12:40:53.694+0000] {subprocess.py:93} INFO - tmp
+[2023-01-30T12:40:53.695+0000] {subprocess.py:93} INFO - usr
+[2023-01-30T12:40:53.695+0000] {subprocess.py:93} INFO - var
+[2023-01-30T12:40:53.695+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-01-30T12:40:53.718+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=flights_data, task_id=dbt_step, execution_date=20230130T124050, start_date=20230130T124053, end_date=20230130T124053
+[2023-01-30T12:40:53.779+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-30T12:40:53.795+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

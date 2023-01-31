@@ -1,0 +1,52 @@
+[2023-01-31T14:56:26.620+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: flights_data.dbt_step scheduled__2023-01-31T13:00:00+00:00 [queued]>
+[2023-01-31T14:56:26.626+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: flights_data.dbt_step scheduled__2023-01-31T13:00:00+00:00 [queued]>
+[2023-01-31T14:56:26.626+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T14:56:26.627+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-01-31T14:56:26.627+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T14:56:26.635+0000] {taskinstance.py:1300} INFO - Executing <Task(BashOperator): dbt_step> on 2023-01-31 13:00:00+00:00
+[2023-01-31T14:56:26.640+0000] {standard_task_runner.py:55} INFO - Started process 443 to run task
+[2023-01-31T14:56:26.644+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'flights_data', 'dbt_step', 'scheduled__2023-01-31T13:00:00+00:00', '--job-id', '128', '--raw', '--subdir', 'DAGS_FOLDER/flights_dag.py', '--cfg-path', '/tmp/tmpnerp8zsz']
+[2023-01-31T14:56:26.645+0000] {standard_task_runner.py:83} INFO - Job 128: Subtask dbt_step
+[2023-01-31T14:56:26.701+0000] {task_command.py:388} INFO - Running <TaskInstance: flights_data.dbt_step scheduled__2023-01-31T13:00:00+00:00 [running]> on host 91e4c7304a05
+[2023-01-31T14:56:26.750+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=flights_data
+AIRFLOW_CTX_TASK_ID=dbt_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-31T13:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-31T13:00:00+00:00
+[2023-01-31T14:56:26.753+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-01-31T14:56:26.754+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'cd /opt/***/dbt && dbt run']
+[2023-01-31T14:56:26.766+0000] {subprocess.py:86} INFO - Output:
+[2023-01-31T14:56:29.599+0000] {subprocess.py:93} INFO - [0m14:56:27  Running with dbt=1.4.1
+[2023-01-31T14:56:29.600+0000] {subprocess.py:93} INFO - [0m14:56:27  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+[2023-01-31T14:56:29.600+0000] {subprocess.py:93} INFO - There are 2 unused configuration paths:
+[2023-01-31T14:56:29.601+0000] {subprocess.py:93} INFO - - models.dbt.2_staging
+[2023-01-31T14:56:29.601+0000] {subprocess.py:93} INFO - - models.dbt.1_mirror
+[2023-01-31T14:56:29.602+0000] {subprocess.py:93} INFO - [0m14:56:27  Found 5 models, 2 tests, 0 snapshots, 0 analyses, 289 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[2023-01-31T14:56:29.602+0000] {subprocess.py:93} INFO - [0m14:56:27
+[2023-01-31T14:56:29.602+0000] {subprocess.py:93} INFO - [0m14:56:28  Concurrency: 4 threads (target='dev')
+[2023-01-31T14:56:29.603+0000] {subprocess.py:93} INFO - [0m14:56:28
+[2023-01-31T14:56:29.603+0000] {subprocess.py:93} INFO - [0m14:56:28  1 of 5 START sql table model analysis.mrr_countries ............................ [RUN]
+[2023-01-31T14:56:29.604+0000] {subprocess.py:93} INFO - [0m14:56:28  2 of 5 START sql table model analysis.mrr_flights .............................. [RUN]
+[2023-01-31T14:56:29.604+0000] {subprocess.py:93} INFO - [0m14:56:28  1 of 5 OK created sql table model analysis.mrr_countries ....................... [[32mSELECT 250[0m in 0.13s]
+[2023-01-31T14:56:29.604+0000] {subprocess.py:93} INFO - [0m14:56:28  2 of 5 OK created sql table model analysis.mrr_flights ......................... [[32mSELECT 2341[0m in 0.13s]
+[2023-01-31T14:56:29.605+0000] {subprocess.py:93} INFO - [0m14:56:28  3 of 5 START sql incremental model analysis.log_flights ........................ [RUN]
+[2023-01-31T14:56:29.605+0000] {subprocess.py:93} INFO - [0m14:56:28  4 of 5 START sql table model analysis.agg_countries ............................ [RUN]
+[2023-01-31T14:56:29.606+0000] {subprocess.py:93} INFO - [0m14:56:28  4 of 5 OK created sql table model analysis.agg_countries ....................... [[32mSELECT 250[0m in 0.11s]
+[2023-01-31T14:56:29.606+0000] {subprocess.py:93} INFO - [0m14:56:28  3 of 5 OK created sql incremental model analysis.log_flights ................... [[32mINSERT 0 2341[0m in 0.13s]
+[2023-01-31T14:56:29.607+0000] {subprocess.py:93} INFO - [0m14:56:28  5 of 5 START sql table model analysis.agg_flights .............................. [RUN]
+[2023-01-31T14:56:29.607+0000] {subprocess.py:93} INFO - [0m14:56:28  5 of 5 OK created sql table model analysis.agg_flights ......................... [[32mSELECT 60[0m in 0.14s]
+[2023-01-31T14:56:29.607+0000] {subprocess.py:93} INFO - [0m14:56:28
+[2023-01-31T14:56:29.608+0000] {subprocess.py:93} INFO - [0m14:56:28  Finished running 4 table models, 1 incremental model in 0 hours 0 minutes and 0.63 seconds (0.63s).
+[2023-01-31T14:56:29.609+0000] {subprocess.py:93} INFO - [0m14:56:28
+[2023-01-31T14:56:29.609+0000] {subprocess.py:93} INFO - [0m14:56:28  [32mCompleted successfully[0m
+[2023-01-31T14:56:29.609+0000] {subprocess.py:93} INFO - [0m14:56:28
+[2023-01-31T14:56:29.610+0000] {subprocess.py:93} INFO - [0m14:56:28  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[2023-01-31T14:56:29.762+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-01-31T14:56:29.786+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=flights_data, task_id=dbt_step, execution_date=20230131T130000, start_date=20230131T145626, end_date=20230131T145629
+[2023-01-31T14:56:29.823+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-01-31T14:56:29.839+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

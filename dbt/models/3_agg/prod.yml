@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: agg_countries
+    description: Staged countries table with demographic data
+    columns:
+      - name: index
+        description: Primary key for countries.
+        tests:
+          - unique
+          - not_null
+      - name: ISO-3166alpha2
+        description: country 2 char code.
+      - name: ISO-3166alpha3
+        description: country 3 char code.
+      - name: ISO-3166numeric
+        description: country numeric code.
+        
+ 

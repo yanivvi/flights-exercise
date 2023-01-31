@@ -1,0 +1,12 @@
+transform:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: 192.168.1.44
+      user: postgres
+      password: password
+      port: 5433
+      dbname: postgres
+      schema: analysis
+      threads: 4
